@@ -1,2 +1,4 @@
 .idea
 basic-design-patterns.iml
+target
+.gitignore
