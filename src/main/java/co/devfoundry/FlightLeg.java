@@ -51,14 +51,28 @@ public class FlightLeg {
 
         private String from;
         private String to;
-        private boolean delayed;
-        private double price;
+//        private boolean delayed;
+        double price;
 
-        public FlightLeg build() {
-            return new FlightLeg(this);
+        public FlightLegBuilder (String from, String to) {
+            this.from = from;
+            this.to = to;
         }
 
 
-    }
+        public FlightLegBuilder price(double price) {
+            this.price = price;
+            return this;
+        }
 
+        public FlightLeg build() {
+
+            if (this.price <= 0) {
+                throw new IllegalStateException("Brak wymaganego pola - cena");
+            }
+                else {
+                return new FlightLeg(this);
+            }
+        }
+    }
 }
