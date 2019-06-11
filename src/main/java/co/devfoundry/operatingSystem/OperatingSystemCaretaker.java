@@ -21,6 +21,8 @@ public class OperatingSystemCaretaker {
 
     public void listExistingBackups() {
 
+        System.out.println("Istniejące backupy:");
+
         for (OperatingSystemMemento backup : backups) {
             System.out.println("Numer: " + backup.backupNumber + ", data: " + backup.backupDate);
         }

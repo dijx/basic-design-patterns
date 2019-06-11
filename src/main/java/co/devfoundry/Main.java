@@ -12,6 +12,7 @@ public class Main {
             OperatingSystem operatingSystem = new OperatingSystem();
 
             operatingSystem.createBackup();
+            operatingSystemCaretaker.addMemento(operatingSystem.save());
             Thread.sleep(3000);
             operatingSystem.createBackup();
             Thread.sleep(3000);
@@ -19,6 +20,10 @@ public class Main {
             operatingSystem.createBackup();
             Thread.sleep(3000);
             operatingSystem.createBackup();
+            operatingSystemCaretaker.addMemento(operatingSystem.save());
+
+            operatingSystemCaretaker.listExistingBackups();
+
             Thread.sleep(3000);
             operatingSystem.load(operatingSystemCaretaker.getMemento(0));
         }
