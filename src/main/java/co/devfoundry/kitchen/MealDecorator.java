@@ -4,7 +4,9 @@ public abstract class MealDecorator extends Meal{
 
     Meal meal;
 
-    MealDecorator(Meal meal){};
+    MealDecorator(Meal meal){
+        this.meal = meal;
+    };
     MealDecorator(){};
 
     @Override
