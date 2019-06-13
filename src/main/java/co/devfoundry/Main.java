@@ -10,10 +10,15 @@ public class Main {
 
         System.out.println(fruitSlotMachine.getState());
 
-        fruitSlotMachine.getState().insertCoin(fruitSlotMachine);
-        fruitSlotMachine.getState().pullTheHandle(fruitSlotMachine);
-        fruitSlotMachine.getState().takeCoinsWon(fruitSlotMachine);
+        fruitSlotMachine.insertCoin();
+        fruitSlotMachine.pullTheHandle();
+        fruitSlotMachine.takeCoinsWon();
 
+        fruitSlotMachine.pullTheHandle();
+        fruitSlotMachine.takeCoinsWon();
+
+        fruitSlotMachine.insertCoin();
+        fruitSlotMachine.takeCoinsWon();
     }
 
 }
